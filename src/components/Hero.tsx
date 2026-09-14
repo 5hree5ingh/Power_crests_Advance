@@ -71,7 +71,7 @@ export default function Hero({ rangeOpen }: HeroProps) {
           animate={rangeOpen ? 'hidden' : 'visible'}
           style={{
             position: 'absolute',
-            top: '50%',
+            top: 'calc(50% + 45px)',
             left: 'clamp(24px, 6vw, 96px)',
             transform: 'translateY(-52%)',
             display: 'flex',
