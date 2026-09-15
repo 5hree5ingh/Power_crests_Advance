@@ -83,49 +83,21 @@ export default function Capabilities() {
           {capabilities.map((cap, i) => (
             <motion.div
               key={cap.category}
-              className="glass-card"
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: '-40px' }}
-              transition={{
-                duration: 0.7,
-                ease: [0.22, 1, 0.36, 1],
-                delay: i * 0.12,
-              }}
-              style={{ padding: '24px 28px' }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: i * 0.12 }}
             >
-              <div
-                style={{
-                  fontSize: '8px',
-                  letterSpacing: '0.3em',
-                  color: 'rgba(125,211,252,0.7)',
-                  marginBottom: '8px',
-                  fontFamily: 'var(--font-tech)',
-                }}
-              >
-                {cap.category}
-              </div>
-              <div
-                style={{
-                  fontSize: '18px',
-                  fontFamily: 'var(--font-display)',
-                  color: 'white',
-                  letterSpacing: '-0.01em',
-                  marginBottom: '12px',
-                }}
-              >
-                {cap.title}
-              </div>
-              <div
-                style={{
-                  fontSize: '10px',
-                  lineHeight: 1.8,
-                  letterSpacing: '0.15em',
-                  color: 'rgba(255,255,255,0.55)',
-                  fontFamily: 'var(--font-tech)',
-                }}
-              >
-                {cap.description}
+              <div className="glass-card" style={{ padding: '24px 28px' }}>
+                <div style={{ fontSize: '8px', letterSpacing: '0.3em', color: 'rgba(125,211,252,0.7)', marginBottom: '8px', fontFamily: 'var(--font-tech)' }}>
+                  {cap.category}
+                </div>
+                <div style={{ fontSize: '18px', fontFamily: 'var(--font-display)', color: 'white', letterSpacing: '-0.01em', marginBottom: '12px' }}>
+                  {cap.title}
+                </div>
+                <div style={{ fontSize: '10px', lineHeight: 1.8, letterSpacing: '0.15em', color: 'rgba(255,255,255,0.55)', fontFamily: 'var(--font-tech)' }}>
+                  {cap.description}
+                </div>
               </div>
             </motion.div>
           ))}
