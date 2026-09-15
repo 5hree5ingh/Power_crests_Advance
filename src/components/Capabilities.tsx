@@ -83,8 +83,8 @@ export default function Capabilities() {
           {capabilities.map((cap, i) => (
             <motion.div
               key={cap.category}
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: i * 0.12 }}
             >
