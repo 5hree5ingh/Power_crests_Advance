@@ -88,14 +88,14 @@ export default function Capabilities() {
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: i * 0.12 }}
             >
-              <div className="glass-card" style={{ padding: '24px 28px' }}>
-                <div style={{ fontSize: '8px', letterSpacing: '0.3em', color: 'rgba(125,211,252,0.7)', marginBottom: '8px', fontFamily: 'var(--font-tech)' }}>
+              <div className="info-card" style={{ padding: '24px 28px' }}>
+                <div style={{ fontSize: '8px', letterSpacing: '0.3em', color: 'var(--accent)', marginBottom: '8px', fontFamily: 'var(--font-tech)' }}>
                   {cap.category}
                 </div>
-                <div style={{ fontSize: '18px', fontFamily: 'var(--font-display)', color: 'white', letterSpacing: '-0.01em', marginBottom: '12px' }}>
+                <div style={{ fontSize: '18px', fontFamily: 'var(--font-display)', color: '#0a0d10', letterSpacing: '-0.01em', marginBottom: '12px' }}>
                   {cap.title}
                 </div>
-                <div style={{ fontSize: '10px', lineHeight: 1.8, letterSpacing: '0.15em', color: 'rgba(255,255,255,0.55)', fontFamily: 'var(--font-tech)' }}>
+                <div style={{ fontSize: '10px', lineHeight: 1.8, letterSpacing: '0.15em', color: 'rgba(10,13,16,0.55)', fontFamily: 'var(--font-tech)' }}>
                   {cap.description}
                 </div>
               </div>

@@ -124,15 +124,15 @@ export default function QualityLab() {
               viewport={{ once: true }}
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: i * 0.08 }}
             >
-              <div className="glass-mid" style={{ padding: '28px 28px 24px', borderRadius: '3px' }}>
-                <div style={{ fontFamily: 'var(--font-display)', fontSize: '64px', color: 'rgba(255,255,255,0.08)', lineHeight: 1, marginBottom: '-8px' }}>{test.number}</div>
-                <div style={{ fontSize: '8px', letterSpacing: '0.35em', color: 'rgba(125,211,252,0.6)', marginBottom: '10px', fontFamily: 'var(--font-tech)' }}>TEST</div>
-                <div style={{ fontSize: '13px', letterSpacing: '0.12em', color: 'white', marginBottom: '16px', fontFamily: 'var(--font-tech)' }}>{test.title}</div>
+              <div className="info-card" style={{ padding: '28px 28px 24px', borderRadius: '4px' }}>
+                <div style={{ fontFamily: 'var(--font-display)', fontSize: '64px', color: 'rgba(10,13,16,0.06)', lineHeight: 1, marginBottom: '-8px' }}>{test.number}</div>
+                <div style={{ fontSize: '8px', letterSpacing: '0.35em', color: 'var(--accent)', marginBottom: '10px', fontFamily: 'var(--font-tech)' }}>TEST</div>
+                <div style={{ fontSize: '13px', letterSpacing: '0.12em', color: '#0a0d10', marginBottom: '16px', fontFamily: 'var(--font-tech)' }}>{test.title}</div>
                 <div style={{ marginTop: '16px' }}>
-                  <div style={{ height: '2px', background: 'rgba(255,255,255,0.08)', borderRadius: '1px', overflow: 'hidden' }}>
-                    <motion.div initial={{ width: 0 }} whileInView={{ width: `${test.pct}%` }} viewport={{ once: true }} transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: i * 0.1 }} style={{ height: '100%', background: 'var(--accent-on-dark)', borderRadius: '1px' }} />
+                  <div style={{ height: '2px', background: 'rgba(10,13,16,0.08)', borderRadius: '1px', overflow: 'hidden' }}>
+                    <motion.div initial={{ width: 0 }} whileInView={{ width: `${test.pct}%` }} viewport={{ once: true }} transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: i * 0.1 }} style={{ height: '100%', background: 'var(--accent)', borderRadius: '1px' }} />
                   </div>
-                  <div style={{ fontSize: '8px', letterSpacing: '0.2em', color: 'rgba(255,255,255,0.4)', marginTop: '6px', fontFamily: 'var(--font-tech)' }}>{test.result}</div>
+                  <div style={{ fontSize: '8px', letterSpacing: '0.2em', color: 'rgba(10,13,16,0.4)', marginTop: '6px', fontFamily: 'var(--font-tech)' }}>{test.result}</div>
                 </div>
               </div>
             </motion.div>

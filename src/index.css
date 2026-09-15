@@ -41,37 +41,48 @@ html, body {
 
 h1, h2, h3, .display { font-family: var(--font-display); font-weight: 400; }
 
-/* GLASS — real frosted glass with backdrop-filter */
+/* GLASS — dark overlay for panels on photo backgrounds */
 .glass {
-  background: rgba(255,255,255,0.06);
-  backdrop-filter: blur(24px) saturate(160%) brightness(1.08);
-  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.08);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(6, 12, 24, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.25);
 }
 .glass-mid {
-  background: rgba(255,255,255,0.11);
-  backdrop-filter: blur(32px) saturate(180%) brightness(1.1);
-  -webkit-backdrop-filter: blur(32px) saturate(180%) brightness(1.1);
-  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(6, 12, 24, 0.60);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.30);
 }
 .glass-strong {
-  background: rgba(255,255,255,0.16);
-  backdrop-filter: blur(48px) saturate(200%) brightness(1.15);
-  -webkit-backdrop-filter: blur(48px) saturate(200%) brightness(1.15);
-  border: 1px solid rgba(255,255,255,0.20);
+  background: rgba(6, 12, 24, 0.70);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 6px 32px rgba(0,0,0,0.35);
 }
 .glass-card {
-  background: rgba(255,255,255,0.06);
-  backdrop-filter: blur(20px) saturate(150%);
-  -webkit-backdrop-filter: blur(20px) saturate(150%);
-  border: 1px solid rgba(255,255,255,0.08);
-  box-shadow: 0 4px 24px rgba(0,0,0,0.35), 0 1px 0 rgba(255,255,255,0.06) inset;
-  transition: background 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+  background: rgba(6, 12, 24, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+  transition: all 0.4s cubic-bezier(0.19,1,0.22,1);
 }
 .glass-card:hover {
-  background: rgba(255,255,255,0.11);
-  border-color: rgba(255,255,255,0.15);
-  box-shadow: 0 8px 48px rgba(0,0,0,0.5);
+  background: rgba(6, 12, 24, 0.70);
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 8px 48px rgba(0,0,0,0.40);
+}
+
+/* INFO-CARD — white premium cards for dark photo sections */
+.info-card {
+  background: white;
+  border: 1px solid rgba(10, 13, 16, 0.06);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12), 0 1px 3px rgba(0,0,0,0.06);
+  color: #0a0d10;
+  transition: all 0.4s cubic-bezier(0.19,1,0.22,1);
+}
+.info-card:hover {
+  box-shadow: 0 12px 48px rgba(15,76,129,0.18), 0 2px 8px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+  border-left-color: #155f9e;
 }
 
 /* CARD — for white/light section contexts */
