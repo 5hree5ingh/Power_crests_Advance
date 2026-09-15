@@ -217,26 +217,6 @@ export default function ProductGrid() {
         ))}
       </div>
 
-      {/* Compare Button */}
-      <div style={{ textAlign: 'center', marginTop: '48px' }}>
-        <button
-          style={{
-            background: 'var(--accent)',
-            color: 'white',
-            padding: '14px 40px',
-            fontSize: '10px',
-            letterSpacing: '0.22em',
-            borderRadius: '2px',
-            border: 'none',
-            cursor: 'pointer',
-            fontFamily: 'var(--font-tech)',
-            textTransform: 'uppercase',
-          }}
-        >
-          COMPARE ALL SIZES
-        </button>
-      </div>
-
       <SpecDrawer productId={selectedProduct} onClose={() => setSelectedProduct(null)} />
     </section>
   );

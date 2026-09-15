@@ -17,7 +17,7 @@ const capabilities = [
     category: 'PRINTING & FINISHING',
     title: 'OFFSET · SCREEN · IML',
     description:
-      'Up to six-colour decoration, in-mould labelling, UV-stable pigments, and full hazard-compliant marking applied before the drum leaves the line.',
+      'In-mould labelling, UV-stable pigments, and full hazard-compliant marking applied before the drum leaves the line.',
   },
 ];
 

@@ -71,9 +71,10 @@ export default function Hero({ rangeOpen }: HeroProps) {
           animate={rangeOpen ? 'hidden' : 'visible'}
           style={{
             position: 'absolute',
-            top: 'calc(50% + 45px)',
+            top: '50%',
             left: 'clamp(24px, 6vw, 96px)',
-            transform: 'translateY(-52%)',
+            transform: 'translateY(-44%)',
+            marginTop: '36px',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'flex-start',
@@ -182,8 +183,10 @@ export default function Hero({ rangeOpen }: HeroProps) {
         </span>
       </div>
 
-      {/* Request A Quote Sticky Button */}
-      <button
+      {/* Download Brochure Sticky Button */}
+      <a
+        href="/Brochure/Powercrestsglobalsolutions_brochure.pdf"
+        download="Powercrests_Brochure.pdf"
         style={{
           position: 'fixed',
           bottom: '32px',
@@ -203,12 +206,22 @@ export default function Hero({ rangeOpen }: HeroProps) {
           transform: rangeOpen ? 'translateX(200px)' : 'none',
           opacity: rangeOpen ? 0 : 1,
           transition: 'transform 0.8s cubic-bezier(0.16,1,0.3,1), opacity 0.5s ease, background 0.3s ease',
+          textDecoration: 'none',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '10px',
         }}
-        onMouseEnter={(e) => ((e.currentTarget as HTMLButtonElement).style.background = '#155f9e')}
-        onMouseLeave={(e) => ((e.currentTarget as HTMLButtonElement).style.background = '#0f4c81')}
+        onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = '#155f9e')}
+        onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = '#0f4c81')}
       >
-        REQUEST A QUOTE
-      </button>
+        {/* Download icon */}
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        DOWNLOAD BROCHURE
+      </a>
     </>
   );
 }

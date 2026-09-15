@@ -11,7 +11,7 @@ import QuoteForm from './components/QuoteForm';
 import Faq from './components/Faq';
 import ClientStrip from './components/ClientStrip';
 import Footer from './components/Footer';
-import CookieConsent from './components/CookieConsent';
+
 import Insights from './components/Insights';
 import IndustriesPage from './components/IndustriesPage';
 import CapabilitiesPage from './components/CapabilitiesPage';
@@ -26,32 +26,25 @@ function App() {
 
   return (
     <>
-      <Header
-        onInsightsOpen={() => setInsightsOpen(true)}
-        onRangeOpen={() => setRangeOpen(true)}
-        onIndustriesOpen={() => setIndustriesOpen(true)}
-        onCapabilitiesOpen={() => setCapabilitiesOpen(true)}
-        onAboutOpen={() => setAboutOpen(true)}
-      />
+      <Header onQuoteOpen={() => { document.getElementById('quote')?.scrollIntoView({ behavior: 'smooth' }); }} />
       <Hero rangeOpen={rangeOpen} />
       <RangeOverlay isOpen={rangeOpen} onClose={() => setRangeOpen(false)} />
 
       <div style={{ position: 'relative', zIndex: 25 }}>
         <div style={{ height: '100vh' }} />
         <div style={{ backgroundColor: 'var(--bg-base)' }}>
-          <BrandManifesto />
-          <Capabilities />
-          <ProductGrid />
+          <section id="about"><BrandManifesto /></section>
+          <section id="capabilities"><Capabilities /></section>
+          <section id="products"><ProductGrid /></section>
           <Testimonials />
-          <QualityLab />
-          <QuoteForm />
-          <Faq />
+          <section id="quality"><QualityLab /></section>
+          <section id="quote"><QuoteForm /></section>
+          <section id="insights"><Faq /></section>
           <ClientStrip />
           <Footer />
         </div>
       </div>
 
-      <CookieConsent />
       <Insights isOpen={insightsOpen} onClose={() => setInsightsOpen(false)} />
       <IndustriesPage isOpen={industriesOpen} onClose={() => setIndustriesOpen(false)} />
       <CapabilitiesPage isOpen={capabilitiesOpen} onClose={() => setCapabilitiesOpen(false)} />

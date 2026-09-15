@@ -5,46 +5,47 @@ const tests = [
   {
     number: '01',
     title: 'DROP TEST',
-    description: '1.8m free fall at -18°C onto the weakest point of the chime.',
+    description: 'Free fall at -18°C onto the weakest point of the container — validates structural integrity on impact.',
     pct: 100,
     result: '100% PASS RATE',
   },
   {
     number: '02',
-    title: 'STACK LOAD',
-    description: '1,800kg sustained for 28 days at 40°C without deformation.',
+    title: 'HANDLE TEST',
+    description: 'Full load suspended by handle for 5 minutes — confirms handle weld and grip durability under stress.',
     pct: 100,
     result: '100% PASS RATE',
   },
   {
     number: '03',
-    title: 'HYDRAULIC PRESSURE',
-    description: '250kPa held for five minutes on every tight-head batch.',
-    pct: 99.8,
-    result: '99.8% PASS RATE',
+    title: 'LEAKAGE TEST',
+    description: 'Air-under-water pressure applied on 100% of sealed units — zero leakage tolerance accepted.',
+    pct: 100,
+    result: '100% PASS RATE',
   },
   {
     number: '04',
-    title: 'LEAKPROOFNESS',
-    description: '30kPa air-under-water on 100% of sealed units.',
+    title: 'STACK LOAD TEST',
+    description: 'Multi-layer stacking force sustained over 28 days at 40°C — ensures safe warehouse storage.',
     pct: 100,
     result: '100% PASS RATE',
   },
   {
     number: '05',
-    title: 'WALL THICKNESS',
-    description: 'Ultrasonic scan at nine points, tolerance ±0.2mm.',
-    pct: 99.6,
-    result: '99.6% PASS RATE',
+    title: 'CAP & CLAMP FITMENT TEST',
+    description: 'Cap torque and clamp seal verified on every batch — tamper-evidence and closure integrity confirmed.',
+    pct: 100,
+    result: '100% PASS RATE',
   },
   {
     number: '06',
-    title: 'MELT FLOW INDEX',
-    description: 'Incoming resin verified at 0.35 g/10min before extrusion.',
+    title: 'VIBRATION TEST',
+    description: 'Filled containers subjected to sustained transport vibration per UN standards — zero fatigue failure accepted.',
     pct: 100,
     result: '100% PASS RATE',
   },
 ];
+
 
 export default function QualityLab() {
   return (
@@ -106,7 +107,7 @@ export default function QualityLab() {
           </h2>
         </div>
 
-        {/* Test Grid */}
+        {/* Test Grid — 3×2 */}
         <div
           style={{
             display: 'grid',
@@ -122,98 +123,17 @@ export default function QualityLab() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{
-                duration: 0.7,
-                ease: [0.22, 1, 0.36, 1],
-                delay: i * 0.08,
-              }}
-              style={{
-                padding: '28px 28px 24px',
-                borderRadius: '3px',
-              }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: i * 0.08 }}
+              style={{ padding: '28px 28px 24px', borderRadius: '3px' }}
             >
-              {/* Large Number */}
-              <div
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontSize: '64px',
-                  color: 'rgba(255,255,255,0.08)',
-                  lineHeight: 1,
-                  marginBottom: '-8px',
-                }}
-              >
-                {test.number}
-              </div>
-              <div
-                style={{
-                  fontSize: '8px',
-                  letterSpacing: '0.35em',
-                  color: 'rgba(125,211,252,0.6)',
-                  marginBottom: '10px',
-                  fontFamily: 'var(--font-tech)',
-                }}
-              >
-                TEST
-              </div>
-              <div
-                style={{
-                  fontSize: '13px',
-                  letterSpacing: '0.12em',
-                  color: 'white',
-                  marginBottom: '8px',
-                  fontFamily: 'var(--font-tech)',
-                }}
-              >
-                {test.title}
-              </div>
-              <div
-                style={{
-                  fontSize: '9px',
-                  lineHeight: 1.8,
-                  color: 'rgba(255,255,255,0.5)',
-                  fontFamily: 'var(--font-tech)',
-                  letterSpacing: '0.1em',
-                }}
-              >
-                {test.description}
-              </div>
-              {/* Result Bar */}
+              <div style={{ fontFamily: 'var(--font-display)', fontSize: '64px', color: 'rgba(255,255,255,0.08)', lineHeight: 1, marginBottom: '-8px' }}>{test.number}</div>
+              <div style={{ fontSize: '8px', letterSpacing: '0.35em', color: 'rgba(125,211,252,0.6)', marginBottom: '10px', fontFamily: 'var(--font-tech)' }}>TEST</div>
+              <div style={{ fontSize: '13px', letterSpacing: '0.12em', color: 'white', marginBottom: '16px', fontFamily: 'var(--font-tech)' }}>{test.title}</div>
               <div style={{ marginTop: '16px' }}>
-                <div
-                  style={{
-                    height: '2px',
-                    background: 'rgba(255,255,255,0.08)',
-                    borderRadius: '1px',
-                    overflow: 'hidden',
-                  }}
-                >
-                  <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${test.pct}%` }}
-                    viewport={{ once: true }}
-                    transition={{
-                      duration: 1.2,
-                      ease: [0.22, 1, 0.36, 1],
-                      delay: i * 0.1,
-                    }}
-                    style={{
-                      height: '100%',
-                      background: 'var(--accent-on-dark)',
-                      borderRadius: '1px',
-                    }}
-                  />
+                <div style={{ height: '2px', background: 'rgba(255,255,255,0.08)', borderRadius: '1px', overflow: 'hidden' }}>
+                  <motion.div initial={{ width: 0 }} whileInView={{ width: `${test.pct}%` }} viewport={{ once: true }} transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: i * 0.1 }} style={{ height: '100%', background: 'var(--accent-on-dark)', borderRadius: '1px' }} />
                 </div>
-                <div
-                  style={{
-                    fontSize: '8px',
-                    letterSpacing: '0.2em',
-                    color: 'rgba(255,255,255,0.4)',
-                    marginTop: '6px',
-                    fontFamily: 'var(--font-tech)',
-                  }}
-                >
-                  {test.result}
-                </div>
+                <div style={{ fontSize: '8px', letterSpacing: '0.2em', color: 'rgba(255,255,255,0.4)', marginTop: '6px', fontFamily: 'var(--font-tech)' }}>{test.result}</div>
               </div>
             </motion.div>
           ))}
@@ -222,3 +142,4 @@ export default function QualityLab() {
     </section>
   );
 }
+

@@ -1,14 +1,10 @@
 import { useRef, useEffect, useState } from 'react';
 
 interface HeaderProps {
-  onInsightsOpen: () => void;
-  onRangeOpen: () => void;
-  onIndustriesOpen: () => void;
-  onCapabilitiesOpen: () => void;
-  onAboutOpen: () => void;
+  onQuoteOpen?: () => void;
 }
 
-export default function Header({ onInsightsOpen, onRangeOpen, onIndustriesOpen, onCapabilitiesOpen, onAboutOpen }: HeaderProps) {
+export default function Header({ onQuoteOpen }: HeaderProps) {
   const pillRef = useRef<HTMLDivElement>(null);
   const [quoteBg, setQuoteBg] = useState('#0f4c81');
 
@@ -26,12 +22,19 @@ export default function Header({ onInsightsOpen, onRangeOpen, onIndustriesOpen, 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollTo = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   const navLinks = [
-    { label: 'PRODUCTS', handler: onRangeOpen },
-    { label: 'CAPABILITIES', handler: onCapabilitiesOpen },
-    { label: 'INDUSTRIES', handler: onIndustriesOpen },
-    { label: 'ABOUT US', handler: onAboutOpen },
-    { label: 'INSIGHTS', handler: onInsightsOpen },
+    { label: 'ABOUT US',      id: 'about' },
+    { label: 'CAPABILITIES',  id: 'capabilities' },
+    { label: 'PRODUCTS',      id: 'products' },
+    { label: 'QUALITY LAB',   id: 'quality' },
+    { label: 'FAQ',           id: 'insights' },
   ];
 
   return (
@@ -45,7 +48,9 @@ export default function Header({ onInsightsOpen, onRangeOpen, onIndustriesOpen, 
           display: 'flex',
           alignItems: 'center',
           gap: '10px',
+          cursor: 'pointer',
         }}
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       >
         <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
           <ellipse cx="10" cy="5" rx="6" ry="2.2" stroke="#0f4c81" strokeWidth="1.4" fill="none" />
@@ -69,10 +74,10 @@ export default function Header({ onInsightsOpen, onRangeOpen, onIndustriesOpen, 
       {navLinks.map((link) => (
         <a
           key={link.label}
-          href="#"
+          href={`#${link.id}`}
           onClick={(e) => {
             e.preventDefault();
-            link.handler();
+            scrollTo(link.id);
           }}
           onMouseEnter={(e) => ((e.target as HTMLElement).style.color = '#0a0d10')}
           onMouseLeave={(e) => ((e.target as HTMLElement).style.color = 'rgba(10,13,16,0.55)')}
@@ -96,6 +101,7 @@ export default function Header({ onInsightsOpen, onRangeOpen, onIndustriesOpen, 
       {/* Request A Quote Button */}
       <div style={{ padding: '0 6px', flexShrink: 0 }}>
         <button
+          onClick={() => onQuoteOpen ? onQuoteOpen() : scrollTo('quote')}
           onMouseEnter={() => setQuoteBg('#155f9e')}
           onMouseLeave={() => setQuoteBg('#0f4c81')}
           style={{
