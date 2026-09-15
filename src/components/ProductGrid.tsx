@@ -38,12 +38,12 @@ export default function ProductGrid() {
             margin: 0,
             lineHeight: 0.95,
           }}
-          dangerouslySetInnerHTML={{ __html: 'THREE FORMS.<br/>ONE TOLERANCE.' }}
+          dangerouslySetInnerHTML={{ __html: 'EIGHT SIZES.<br/>ONE STANDARD.' }}
         />
       </div>
 
       {/* 3-Column Grid */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
         {products.map((product, i) => (
           <motion.div
             key={product.id}
@@ -90,7 +90,7 @@ export default function ProductGrid() {
                   pointerEvents: 'none',
                 }}
               />
-              {/* UN Rating Badge */}
+              {/* SIZE Badge */}
               <div
                 style={{
                   position: 'absolute',
@@ -107,7 +107,7 @@ export default function ProductGrid() {
                   fontFamily: 'var(--font-tech)',
                 }}
               >
-                UN {product.quickSpecs.find((s) => s.label === 'UN RATING')?.value}
+                {product.quickSpecs.find((s) => s.label === 'SIZE')?.value}
               </div>
               {/* Product Info */}
               <div style={{ position: 'absolute', bottom: '20px', left: '20px' }}>
@@ -145,7 +145,7 @@ export default function ProductGrid() {
                   marginBottom: '20px',
                 }}
               >
-                {['CAPACITY', 'WEIGHT', 'HEIGHT', 'CLOSURE'].map((key) => {
+                {['SIZE', 'CAPACITY', 'WEIGHT', 'HEIGHT'].map((key) => {
                   const spec = product.quickSpecs.find((s) => s.label === key);
                   return (
                     <div key={key}>
@@ -233,7 +233,7 @@ export default function ProductGrid() {
             textTransform: 'uppercase',
           }}
         >
-          COMPARE ALL THREE
+          COMPARE ALL SIZES
         </button>
       </div>
 

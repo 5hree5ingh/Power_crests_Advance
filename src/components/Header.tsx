@@ -61,7 +61,7 @@ export default function Header({ onInsightsOpen, onRangeOpen, onIndustriesOpen, 
             fontFamily: 'var(--font-display)',
           }}
         >
-          POWERCREST
+          POWERCRESTS
         </span>
       </div>
 

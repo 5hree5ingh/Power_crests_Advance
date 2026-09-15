@@ -6,38 +6,37 @@ interface AboutPageProps {
 }
 
 const stats = [
-  { value: '30', label: 'YEARS' },
-  { value: '6', label: 'PRODUCTION LINES' },
-  { value: '1.2M', label: 'UNITS / YEAR' },
-  { value: '18', label: 'COUNTRIES SHIPPED' },
+  { value: '10+', label: 'YEARS OF EXPERIENCE' },
+  { value: '5–65 L', label: 'HDPE CONTAINER RANGE' },
+  { value: 'ISO', label: '9001:2015 & 22000:2018' },
+  { value: '∞', label: 'CUSTOMERS ACROSS INDUSTRIES' },
 ];
 
 const values = [
   {
-    title: 'INTEGRITY OF MATERIAL',
-    description: 'ZERO REGRIND. ZERO COMPROMISE. EVERY DRUM IS MOULDED FROM 100% VIRGIN HIGH-DENSITY POLYETHYLENE.',
+    title: 'QUALITY FOCUSSED',
+    description: 'EVERY PRODUCT IS MANUFACTURED USING PREMIUM RAW MATERIALS AND STRICT QUALITY CONTROL.',
   },
   {
-    title: 'REPEATABILITY',
-    description: 'THE DRUM YOU RECEIVE ON ORDER FIVE THOUSAND IS IDENTICAL TO THE DRUM YOU RECEIVED ON ORDER ONE.',
+    title: 'ADVANCED MANUFACTURING',
+    description: 'STATE-OF-THE-ART INFRASTRUCTURE AND MODERN TECHNOLOGY ENSURE PRECISION AND CONSISTENCY.',
   },
   {
-    title: 'TRACEABILITY',
-    description: 'EVERY BATCH IS TESTED, LOGGED, AND TRACEABLE FROM RESIN INTAKE TO DISPATCH.',
+    title: 'WIDE RANGE',
+    description: 'HDPE JARS, DRUMS, AND CONTAINERS FROM 5 LTR TO 65 LTR FOR DIVERSE INDUSTRIAL APPLICATIONS.',
   },
   {
-    title: 'RESPONSIBILITY',
-    description: 'ISO 14001 CERTIFIED. MINIMISING WASTE, ENERGY, AND ENVIRONMENTAL IMPACT AT EVERY STAGE.',
+    title: 'CUSTOMER COMMITMENT',
+    description: 'WE BUILD LONG-TERM RELATIONSHIPS BY DELIVERING RELIABLE PRODUCTS AND EXCEPTIONAL SERVICE.',
   },
 ];
 
 const timeline = [
-  { year: '1996', event: 'Founded with a single 50-litre blow moulding line and four employees.' },
-  { year: '2002', event: 'First UN certification secured; entry into the agrochemical supply chain.' },
-  { year: '2009', event: 'In-house tool room commissioned, ending all outsourced mould dependency.' },
-  { year: '2015', event: 'ISO 9001 certification and full batch-level traceability introduced.' },
-  { year: '2021', event: 'Sixth line commissioned; annual capacity crosses one million units.' },
-  { year: '2026', event: 'Thirty years on, POWERCREST supplies eighteen countries with a zero field-failure record.' },
+  { year: 'WHO WE ARE', event: 'Powercrests Global Solutions Pvt. Ltd. is a quality centric organization committed to delivering high-performance HDPE industrial containers that meet global standards.' },
+  { year: 'OUR VISION', event: 'Led by vision. Driven by experience. Mr. Akshit Jain, Founder & Business Head, leads with 15+ years of expertise in industrial packaging solutions.' },
+  { year: 'OUR PROMISE', event: 'Engineered for Strength. Built for Reliability. Every container passes ASTM & UN standard tests — Drop, Handle, Leakage, Stack Load, and Cap & Clamp Fitment.' },
+  { year: 'CERTIFICATIONS', event: 'ISO 9001:2015 Certified (Quality Management System) and ISO 22000:2018 Certified (Food Safety Management System). Premium Quality — Trusted, Tested, Delivered.' },
+  { year: 'OUR RANGE', event: 'Full Open Top drums (25–50 KG), Narrow Mouth Rocket Containers (50 KG), and Narrow Mouth Mouser Containers (25–35 KG) — 5 Ltr to 65 Ltr for all industrial needs.' },
 ];
 
 export default function AboutPage({ isOpen, onClose }: AboutPageProps) {
@@ -124,7 +123,8 @@ export default function AboutPage({ isOpen, onClose }: AboutPageProps) {
                   margin: '0 0 24px 0',
                 }}
               >
-                THIRTY YEARS OF HOLDING THE LINE.
+                ENGINEERED FOR STRENGTH.
+                <br />DRIVEN BY TRUST.
               </h2>
             </div>
             <div>

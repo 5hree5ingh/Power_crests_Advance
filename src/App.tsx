@@ -6,7 +6,6 @@ import BrandManifesto from './components/BrandManifesto';
 import Capabilities from './components/Capabilities';
 import ProductGrid from './components/ProductGrid';
 import Testimonials from './components/Testimonials';
-import Certifications from './components/Certifications';
 import QualityLab from './components/QualityLab';
 import QuoteForm from './components/QuoteForm';
 import Faq from './components/Faq';
@@ -44,7 +43,6 @@ function App() {
           <Capabilities />
           <ProductGrid />
           <Testimonials />
-          <Certifications />
           <QualityLab />
           <QuoteForm />
           <Faq />

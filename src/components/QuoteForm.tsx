@@ -106,64 +106,20 @@ export default function QuoteForm() {
             </div>
           </div>
 
-          {/* Row 3 */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '16px' }}>
-            <div>
-              <label style={labelStyle}>PRODUCT TYPE</label>
-              <select style={{ ...inputStyle, appearance: 'none', cursor: 'pointer' }}>
-                <option>OPEN TOP DRUM</option>
-                <option>TIGHT HEAD DRUM</option>
-                <option>JERRY CAN</option>
-                <option>CUSTOM MOULD</option>
-              </select>
-            </div>
-            <div>
-              <label style={labelStyle}>CAPACITY REQUIRED</label>
-              <select style={{ ...inputStyle, appearance: 'none', cursor: 'pointer' }}>
-                <option>5L</option>
-                <option>20L</option>
-                <option>50L</option>
-                <option>200L</option>
-                <option>220L</option>
-                <option>OTHER</option>
-              </select>
-            </div>
-          </div>
-
-          {/* Row 4 */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '16px' }}>
-            <div>
-              <label style={labelStyle}>ANNUAL VOLUME</label>
-              <input type="text" style={inputStyle} placeholder="APPROX. UNITS PER YEAR" />
-            </div>
-            <div>
-              <label style={labelStyle}>CONTENTS TO BE STORED</label>
-              <input type="text" style={inputStyle} placeholder="E.G. AGROCHEMICAL, LUBRICANT, FOOD GRADE" />
-            </div>
-          </div>
-
-          {/* Certification */}
-          <div style={{ marginBottom: '16px' }}>
-            <label style={labelStyle}>CERTIFICATION REQUIRED</label>
-            <input
-              type="text"
-              style={inputStyle}
-              placeholder="UN RATING, FDA, REACH — OR NOTE IF UNSURE"
-            />
-          </div>
 
           {/* Additional */}
           <div style={{ marginBottom: '16px' }}>
-            <label style={labelStyle}>ADDITIONAL REQUIREMENTS</label>
+            <label style={labelStyle}>SHARE YOUR REQUIREMENT</label>
             <textarea
-              rows={4}
+              rows={5}
               style={{
                 ...inputStyle,
                 resize: 'vertical',
               }}
-              placeholder="COLOUR, PRINTING, CLOSURE TYPE, DELIVERY LOCATION..."
+              placeholder="DESCRIBE YOUR REQUIREMENT — PRODUCT TYPE, QUANTITY, COLOUR, CLOSURE, DELIVERY LOCATION..."
             />
           </div>
+
 
           {/* Submit */}
           <motion.button

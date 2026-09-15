@@ -55,19 +55,24 @@ export default function Footer() {
                   letterSpacing: '0.26em',
                 }}
               >
-                POWERCREST
+                POWERCRESTS
               </span>
             </div>
             <div
               style={{
                 fontSize: '9px',
-                letterSpacing: '0.28em',
+                letterSpacing: '0.18em',
                 color: 'rgba(255,255,255,0.4)',
-                marginTop: '16px',
+                marginTop: '4px',
                 fontFamily: 'var(--font-tech)',
               }}
             >
-              SINCE 1996. SEALED, CERTIFIED, DELIVERED.
+              GLOBAL SOLUTIONS PVT. LTD.
+            </div>
+            <div style={{ marginTop: '20px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              <a href="tel:+919045101186" style={{ fontSize: '9px', letterSpacing: '0.18em', color: 'rgba(255,255,255,0.5)', textDecoration: 'none', fontFamily: 'var(--font-tech)' }}>📞 +91 90451 01186</a>
+              <a href="mailto:sales@powercrests.com" style={{ fontSize: '9px', letterSpacing: '0.18em', color: 'rgba(255,255,255,0.5)', textDecoration: 'none', fontFamily: 'var(--font-tech)' }}>✉ sales@powercrests.com</a>
+              <a href="https://www.powercrestsglobal.com" target="_blank" rel="noreferrer" style={{ fontSize: '9px', letterSpacing: '0.18em', color: 'rgba(255,255,255,0.5)', textDecoration: 'none', fontFamily: 'var(--font-tech)' }}>🌐 www.powercrestsglobal.com</a>
             </div>
           </div>
 
@@ -169,7 +174,7 @@ export default function Footer() {
               fontFamily: 'var(--font-tech)',
             }}
           >
-            © 2026 POWERCREST INDUSTRIES. ALL RIGHTS RESERVED.
+            © 2026 POWERCRESTS GLOBAL SOLUTIONS PVT. LTD. ALL RIGHTS RESERVED.
           </span>
           <div style={{ display: 'flex', gap: '24px' }}>
             {['Privacy Policy', 'Terms of Supply'].map((link) => (
