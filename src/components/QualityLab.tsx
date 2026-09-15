@@ -49,7 +49,7 @@ const tests = [
 
 export default function QualityLab() {
   return (
-    <section style={{ position: 'relative', overflow: 'hidden', minHeight: '100vh' }}>
+    <section style={{ position: 'relative', minHeight: '100vh' }}>
       {/* Image Background — NO overlay */}
       <img
         src="/img/quality-lab.jpg"
